@@ -1,0 +1,39 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  background-color: #242424;
+  color: white;
+}
+
+.text {
+  font-size: 3rem;
+}
+
+.cursor {
+  position: relative;
+}
+
+.cursor::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 3rem;
+  background-color: white;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
